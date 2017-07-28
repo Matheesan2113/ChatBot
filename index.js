@@ -19,7 +19,7 @@ app.get('/',function(req,res){
         
 // FACEBOOK
 app.get('/webhook/', function(req,res){
-    if(req.query['hub.verify_token']==="blondiebytes"){
+    if(req.query['hub.verify_token']==="matheetoken"){
        res.send(req.query['hub.challenge'])
        }
        res.send("Wrong token")
