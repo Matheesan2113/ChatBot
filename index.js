@@ -47,7 +47,10 @@ app.post('/webhook/', function(req, res) {
            //         sendText(sender,"The temperature in Toronto is "+temperature)
            //        }
             else if(text.indexOf('aaron') >= 0){
-                  sendText(sender,"Cause he's a black man ")
+                  sendText(sender,"yes. cause Aaron is a negro")
+                  }
+            else if(text.indexOf('Thuvaa') >= 0){
+                  sendText(sender,"Thuvaa is trash at everything, but mostly ball and ow.")
                   }
             else if(text==="premium"){
                     sendText(sender,"I didn't do 5% because I might resell it")
@@ -55,7 +58,7 @@ app.post('/webhook/', function(req, res) {
             else{
                     sendText(sender, "Please enter a proper command.")
                     }
-			         sendText(sender, "Text echo: " + text.substring(0, 100))
+			        // sendText(sender, "Text echo: " + text.substring(0, 100))
 		}
 	}
 	res.sendStatus(200)
