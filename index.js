@@ -40,19 +40,19 @@ app.post('/webhook/', function(req, res) {
 		let sender = event.sender.id
 		if (event.message && event.message.text) {
 			let text = event.message.text
-            if(text==="hi"){
+            if(text.toUpperCase()==="HI" or text.toUpperCase()==="HELLO"){
                     sendText(sender,"Hello, how do you do?")
                     }
            // else if(text.indexOf('weather') >= 0){
            //         sendText(sender,"The temperature in Toronto is "+temperature)
            //        }
-            else if(text.indexOf('aaron') >= 0){
+            else if(text.toUpperCase().indexOf('AARON') >= 0){
                   sendText(sender,"yes. cause Aaron is a negro")
                   }
-            else if(text.indexOf('Thuvaa') >= 0){
+            else if(text.toUpperCase().indexOf('THUVAA') >= 0){
                   sendText(sender,"Thuvaa is trash at everything, but mostly ball and ow.")
                   }
-            else if(text==="premium"){
+            else if(text.toUpperCase().indexof('premium')>=0){
                     sendText(sender,"I didn't do 5% because I might resell it")
                     }
             else{
