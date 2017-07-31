@@ -36,6 +36,12 @@ app.post('/webhook/', function(req, res) {
 		let sender = event.sender.id
 		if (event.message && event.message.text) {
 			let text = event.message.text
+            if(text==="hi"){
+                sendText(sender," Hello, how do you do?")
+            }
+            else{
+                sendText(sender, "Please enter a proper command.")
+            }
 			sendText(sender, "Text echo: " + text.substring(0, 100))
 		}
 	}
