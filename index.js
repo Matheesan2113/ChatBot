@@ -24,7 +24,7 @@ let token = "EAAZA99umZBsYoBAFuinPL0OfXuQpGVFkAQFBZBtd9U9BSQGd6nz50a2w5ajJyr7WSX
 weather.find({search: 'Toronto, ON', degreeType: 'C'}, function(err,result){
      if(err) console.log(err)
      console.log(JSON.stringify(result, null, 2))
-    var temperature = result["current"].temperature;
+   // var temperature = result["current"].temperature;
 })
 app.get('/webhook/', function(req, res) {
 	if (req.query['hub.verify_token'] === "matheetoken") {
