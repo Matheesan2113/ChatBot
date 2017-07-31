@@ -3,9 +3,13 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const request = require('request')
-
+const weather = require ('weather-js');
 const app = express()
-
+weather.find({search: 'Toronto, ON',degreeType: "C"}, function(err,result){
+     if(err) console.log(err)
+     console.log(JSON.stringify(result, null, 2))
+    var temperature = json["current"].temperature;
+})
 app.set('port', (process.env.PORT || 5000))
 
 // Allows us to process the data
@@ -37,15 +41,18 @@ app.post('/webhook/', function(req, res) {
 		if (event.message && event.message.text) {
 			let text = event.message.text
             if(text==="hi"){
-                sendText(sender,"Hello, how do you do?")
-            }
+                    sendText(sender,"Hello, how do you do?")
+                    }
+            else if(text.indexOf('weather') >= 0){
+                    sendText(sender,"The temperature in Toronto is "+temperature)
+                    }
             else if(text==="premium"){
                     sendText(sender,"I didn't do 5% because I might resell it")
                     }
             else{
-                sendText(sender, "Please enter a proper command.")
-            }
-			sendText(sender, "Text echo: " + text.substring(0, 100))
+                    sendText(sender, "Please enter a proper command.")
+                    }
+			         sendText(sender, "Text echo: " + text.substring(0, 100))
 		}
 	}
 	res.sendStatus(200)
