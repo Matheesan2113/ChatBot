@@ -21,11 +21,11 @@ app.get('/', function(req, res) {
 let token = "EAAZA99umZBsYoBAFuinPL0OfXuQpGVFkAQFBZBtd9U9BSQGd6nz50a2w5ajJyr7WSXYkQoZCrlwg16Vick6r4hxvHjUzJcsQDXvDvuVRIibbNSppOFwfnp0A78oJJ0XYxvL0JaKQjXVZALOBuHds6wLy3iLFqrAmQTMynzLBz7QZDZD"
 
 // Facebook 
-//weather.find({search: 'Toronto, ON', degreeType: "C"}, function(err,result){
-//     if(err) console.log(err)
-//     console.log(JSON.stringify(result, null, 2))
-//    var temperature = json["current"].temperature;
-//})
+weather.find({search: 'Toronto, ON', degreeType: 'C'}, function(err,result){
+     if(err) console.log(err)
+     console.log(JSON.stringify(result, null, 2))
+    var temperature = result["current"].temperature;
+})
 app.get('/webhook/', function(req, res) {
 	if (req.query['hub.verify_token'] === "matheetoken") {
 		res.send(req.query['hub.challenge'])
