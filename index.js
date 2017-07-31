@@ -47,7 +47,7 @@ app.post('/webhook/', function(req, res) {
            //         sendText(sender,"The temperature in Toronto is "+temperature)
            //        }
             else if(text.match(/aaron/i){
-                  sendText(sender,"Please don't talk about him here. This is a sacred place")
+                  sendText(sender,"Please don't talk about him here.")
                   }
             else if(text.match(/Thuvaa/i)){
                   sendText(sender,"Thuvaa is trash at everything, but mostly ball and ow.")
@@ -59,7 +59,7 @@ app.post('/webhook/', function(req, res) {
                   sendText(sender,"Gooks have no place here")
                   }
              else if(text.match(/huzaifa/i)){
-                  sendText(sender,"Huzaifa can suck this AI *****")
+                  sendText(sender,"Huzaifa can suck this AI dick")
                   }
              else if(text.match(/mardee/i)){
                   sendText(sender,"Please refer to him as MoonGod")
