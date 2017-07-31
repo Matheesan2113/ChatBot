@@ -37,8 +37,11 @@ app.post('/webhook/', function(req, res) {
 		if (event.message && event.message.text) {
 			let text = event.message.text
             if(text==="hi"){
-                sendText(sender," Hello, how do you do?")
+                sendText(sender,"Hello, how do you do?")
             }
+            else if(text==="premium"){
+                    sendText(sender,"I didn't do 5% because I might resell it")
+                    }
             else{
                 sendText(sender, "Please enter a proper command.")
             }
