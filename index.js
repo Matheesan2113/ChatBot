@@ -40,8 +40,8 @@ app.post('/webhook/', function(req, res) {
 		let sender = event.sender.id
 		if (event.message && event.message.text) {
 			let text = event.message.text
-            if(text.match(/"hi/i)){
-                    sendText(sender,"Hello, how do you do?")
+            if(text.match(/"hi/i) || text.match(/hello/i)){
+                    sendText(sender,"Hello.")
                     }
            // else if(text.indexOf('weather') >= 0){
            //         sendText(sender,"The temperature in Toronto is "+temperature)
@@ -61,11 +61,14 @@ app.post('/webhook/', function(req, res) {
              else if(text.match(/huzaifa/i)){
                   sendText(sender,"Huzaifa can suck this AI dick")
                   }
-             else if(text.match(/mardee/i)){
+             else if(text.match(/mardee/i) || text.match(/mardy/i)){
                   sendText(sender,"Please refer to him as MoonGod")
                   }
             else if(text.match(/premium/i)){
                     sendText(sender,"I didn't do 5% because I might resell it")
+                    }
+             else if(text.match(/fayaad/i)){
+                    sendText(sender,"Mongolians are coming")
                     }
             else{
                     sendText(sender, "Please enter a proper command.")
