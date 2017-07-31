@@ -46,13 +46,13 @@ app.post('/webhook/', function(req, res) {
            // else if(text.indexOf('weather') >= 0){
            //         sendText(sender,"The temperature in Toronto is "+temperature)
            //        }
-            else if(text.indexOf('aaron') >= 0){
+            else if(text.indexOf(/aaron/i) >= 0){
                   sendText(sender,"yes. cause Aaron is a negro")
                   }
-            else if(text.indexOf('Thuvaa') >= 0){
+            else if(text.indexOf(/Thuvaa/i) >= 0){
                   sendText(sender,"Thuvaa is trash at everything, but mostly ball and ow.")
                   }
-            else if(text==="premium"){
+            else if(text==="/premium/i"){
                     sendText(sender,"I didn't do 5% because I might resell it")
                     }
             else{
