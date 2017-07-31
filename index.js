@@ -47,10 +47,22 @@ app.post('/webhook/', function(req, res) {
            //         sendText(sender,"The temperature in Toronto is "+temperature)
            //        }
             else if(text.match(/aaron/i){
-                  sendText(sender,"yes. cause Aaron is a negro")
+                  sendText(sender,"Please don't talk about him here. This is a sacred place")
                   }
             else if(text.match(/Thuvaa/i)){
                   sendText(sender,"Thuvaa is trash at everything, but mostly ball and ow.")
+                  }
+             else if(text.match(/usama/i)){
+                  sendText(sender,"son of laden?")
+                  }
+             else if(text.match(/stephen/i)){
+                  sendText(sender,"Gooks have no place here")
+                  }
+             else if(text.match(/huzaifa/i)){
+                  sendText(sender,"Huzaifa can suck this AI dick")
+                  }
+             else if(text.match(/mardee/i)){
+                  sendText(sender,"Please refer to him as MoonGod")
                   }
             else if(text.match(/premium/i){
                     sendText(sender,"I didn't do 5% because I might resell it")
