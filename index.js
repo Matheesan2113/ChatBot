@@ -40,7 +40,7 @@ app.post('/webhook/', function(req, res) {
 		let sender = event.sender.id
 		if (event.message && event.message.text) {
 			let text = event.message.text
-            if(text.toUpperCase()==="HI" || text.toUpperCase()==="HELLO"){
+            if(text.toUpperCase()==="HI" /*|| text.toUpperCase()==="HELLO"*/){
                     sendText(sender,"Hello, how do you do?")
                     }
            // else if(text.indexOf('weather') >= 0){
@@ -58,7 +58,7 @@ app.post('/webhook/', function(req, res) {
             else{
                     sendText(sender, "Please enter a proper command.")
                     }
-			        // sendText(sender, "Text echo: " + text.substring(0, 100))
+			      sendText(sender, "Text echo: " + text.substring(0, 100))
 		}
 	}
 	res.sendStatus(200)
