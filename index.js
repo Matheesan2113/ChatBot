@@ -59,7 +59,7 @@ app.post('/webhook/', function(req, res) {
                   sendText(sender,"Gooks have no place here")
                   }
              else if(text.match(/huzaifa/i)){
-                  sendText(sender,"Huzaifa can suck this AI dick")
+                  sendText(sender,"Huzaifa can suck this AI *****")
                   }
              else if(text.match(/mardee/i)){
                   sendText(sender,"Please refer to him as MoonGod")
