@@ -49,7 +49,7 @@ app.post('/webhook/', function(req, res) {
             else if(text.indexOf(/aaron/i) >= 0){
                   sendText(sender,"yes. cause Aaron is a negro")
                   }
-            else if(text.indexOf(/Thuvaa/i) >= 0){
+            else if(text.match(/Thuvaa/i)){
                   sendText(sender,"Thuvaa is trash at everything, but mostly ball and ow.")
                   }
             else if(text==="/premium/i"){
